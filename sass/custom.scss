@@ -1,0 +1,261 @@
+@import "template";
+
+
+
+body {
+	@extend %clearspace;
+	@include transition();
+	background-color: $background-color;
+	font-size: 16px;
+	line-height: 1.5em;
+	width: 100%;
+	color: $darkergrey;
+	overflow-x: hidden;
+	height: 100%;
+	width: 100%;
+	min-height: 100%;
+}
+
+a {
+	@include transition();
+	text-decoration: none;
+	&:hover { text-decoration: none; }
+}
+hr {
+	border-color: rgba($grey,0.1);
+}
+h1,h2,h3,h4,h5,h6 {
+	@extend %clearspace;
+}
+
+.nopadding { padding: 0 !important; margin: 0 !important; }
+.valign-bottom { vertical-align: bottom; }
+
+.text-size-xl { font-size: 3.5em; line-height: 1em; }
+.text-size-lg { font-size: 1.5em; line-height: 1.6em; }
+.text-size-md { font-size: 1.25em; line-height: 1.5em; }
+.text-size-sm { font-size: 0.9em !important; }
+.text-size-xs { font-size: 0.7em !important; }
+
+.text-color-default { color: $darkergrey !important; }
+.text-color-green { color: $green !important; }
+.text-color-blue { color: $blue !important; }
+.text-color-red { color: $red !important; }
+.text-color-lightgrey { color: $lightgrey !important; }
+.text-color-lightergrey { color: $lightergrey !important; }
+
+.tab-inner-xl { padding: 0px 200px; }
+.tab-inner-lg { padding: 0px 100px; }
+.tab-inner-md { padding: 0px 50px; }
+.tab-inner-sm { padding: 0px 30px; }
+.tab-inner-xs { padding: 0px 15px; }
+
+.pad-bottom-xl { padding-bottom: 35px; }
+.pad-bottom-lg { padding-bottom: 25px; }
+.pad-bottom-md { padding-bottom: 18px; }
+.pad-bottom-sm { padding-bottom: 12px; }
+.pad-bottom-xs { padding-bottom: 5px; }
+
+
+
+
+// VARIABLES
+$header-height: 100px;
+$header-height-small: 65px;
+header {
+	@include shadow(10px, 0.3);
+	height: $header-height;
+	background: $color-theme-1;
+	text-align: center;
+	.logo {
+		height: $header-height;
+		img {
+			height: 100%;
+			padding: 20px;
+		}
+	}
+}
+
+
+
+
+$round-size: 5px;
+$title-height: 50px;
+$foot-button-height: 80px;
+.maincontent {
+	@include shadow(10px, 0.3);
+	background: $white;
+	min-height: 600px;
+	margin-top: 8vh;
+	margin-bottom: 8vh;
+	position: relative;
+	padding-bottom: $foot-button-height;
+	h1 {
+		@extend %clearspace;
+		background: $color-theme-1;
+		height: 50px;
+		line-height: $title-height;
+		font-size: 1.3em;
+		color: $white;
+		padding: 0px 20px;
+		font-weight: bold;
+	}
+	.innercontainer {
+		padding: 30px;
+		p {
+			width: 100%;
+			display: table;
+			vertical-align: top;
+			padding: 10px 0px;
+			label {
+				@include round($round-size);
+				display: table-cell;
+				font-size: 0.75em;
+				background: $grey;
+				color: $white;
+				padding: 0px 5px;
+				width: 75px;
+			}
+		}
+	}
+	.foot-button {
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		height: $foot-button-height;
+		background: #f5f5f5;
+		border-top: solid 1px #ddd;
+		text-align: right;
+		.foot-innercontainer {
+			padding: 15px;
+			height: 100%;
+			button, input[type=submit] {
+				height: 100%;
+				padding-left: 75px;
+				padding-right: 75px;
+			}
+		}
+	}
+}
+
+
+
+.inputstyle {
+	@include round($round-size);
+	display: table-cell;
+	margin-left: 10px;
+	margin-right: 20px;
+	border: solid 1px $lightergrey;
+	padding: 3px 5px;
+	&.is-full { width: 98%; }
+	&.is-xl { width: 85%; }
+	&.is-lg { width: 75%; }
+	&.is-md { width: 50%; }
+	&.is-sm { width: 25%; }
+	&.is-xs {
+		width: 35px;
+		margin-right: 0px;
+		text-align: center;
+	}
+}
+
+
+
+
+// MEDIA QUERY
+// (XS) Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+	header {
+		@include shadow(10px, 0.3);
+		height: $header-height-small;
+		.logo {
+			height: $header-height-small;
+			img { padding: 10px; }
+		}
+	}
+	.maincontent {
+		margin-top: 4vh;
+		margin-bottom: 4vh;
+		.innercontainer {
+			padding: 20px;
+			p { padding: 5px 0px; }
+		}
+		.foot-button {
+			text-align: center;
+			.foot-innercontainer {
+				button, input[type=submit] {
+				}
+			}
+		}
+	}
+}
+
+
+// (SM) Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {
+	header {
+		@include shadow(10px, 0.3);
+		height: $header-height-small;
+		.logo {
+			height: $header-height-small;
+			img { padding: 10px; }
+		}
+	}
+	.maincontent {
+		margin-top: 4vh;
+		margin-bottom: 4vh;
+		.innercontainer {
+			padding: 20px;
+			p { padding: 5px 0px; }
+		}
+		.foot-button {
+			text-align: center;
+			.foot-innercontainer {
+				button, input[type=submit] {
+					padding-left: 60px;
+					padding-right: 60px;
+				}
+			}
+		}
+	}
+}
+
+
+// (MD) Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+	header {
+		@include shadow(10px, 0.3);
+		height: $header-height-small;
+		.logo {
+			height: $header-height-small;
+			img { padding: 10px; }
+		}
+	}
+	.maincontent {
+		margin-top: 5vh;
+		margin-bottom: 5vh;
+		.innercontainer {
+			p { padding: 5px 0px; }
+		}
+		.foot-button {
+			text-align: center;
+		}
+	}
+}
+
+
+// (LG) Large devices (tablets/ipad, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+
+// (XL / HD) Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) and (max-width: 1500px) {
+}
+
+
+// (FHD) Extra large devices (Full HD desktops, 1900px and up)
+@media (min-width: 1900px) {
+	//body { font-size: 15px; }
+}

@@ -1,0 +1,114 @@
+// COLORS DEFAULT
+$color-facebook: #00F;
+$color-twitter: #AAF;
+$color-instagram: #B71;
+$color-youtube: #F00;
+
+$lightestgrey: #C8C8C8;
+$lightergrey: #AAA;
+$lightgrey: #999;
+$grey: #777;
+$darkgrey: #656565;
+$darkergrey: #333;
+$darkestgrey: #16130c;
+
+$darkestblue: #003e6f;
+$darkerblue: #005fa9;
+$darkblue: #006bc6;
+$blue: #0099ff;
+$lightblue: #00d2ff;
+$lighterblue: #31dbff;
+$lightestblue: #64e4ff;
+
+$lightestbrown: #e56837;
+$lighterbrown: #d6531f;
+$lightbrown: #9c340b;
+$brown: #7f2907;
+$darkbrown: #461704;
+$darkerbrown: #30170c;
+$darkestbrown: #210e06;
+
+$lightestcream: #fff9f2;
+$lightercream: #fff7ee;
+$lightcream: #fff3e4;
+$cream: #ffedd7;
+$darkcream: #f4d8b5;
+$darkercream: #e6c091;
+$darkestcream: #dda25f;
+
+$darkestorange: #ff7200;
+$darkerorange: #ff8a00;
+$darkorange: #ffa200;
+$orange: #f5a623;
+$lightorange: #ffc618;
+$lighterorange: #ffcb2d;
+$lightestorange: #ffd248;
+
+$background-color: #eee;
+$red: #e5236d;
+$green: #10af00;
+$white: #FFF;
+$black: #000;
+
+
+$color-theme-1: #641633;
+
+
+// EXTEND
+%clearspace {
+	padding: 0px;
+	margin: 0px auto;
+}
+
+
+// MIXIN
+@mixin clearspace {
+	padding: 0px;
+	margin: 0px auto;
+} 
+@mixin clearspace-extend {
+	padding: 0px;
+	margin: 0px auto;
+} 
+@mixin round($radius: 50%) {
+	border-radius: $radius;
+	-o-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;	
+}
+@mixin transition($duration: 300ms) {
+	transition: all $duration ease-IN;
+	-o-transition: all $duration ease;
+	-ms-transition: all $duration ease;
+	-moz-transition: all $duration ease;
+	-webkit-transition: all $duration ease;
+}
+@mixin glow($thickness: 25px, $color: #FFF, $opacity: 0.15) {
+	box-shadow: 0 0 $thickness 1px rgba($color, $opacity);
+	-o-box-shadow: 0 0 $thickness 1px rgba($color, $opacity);
+	-ms-box-shadow: 0 0 $thickness 1px rgba($color, $opacity);
+	-moz-box-shadow: 0 0 $thickness 1px rgba($color, $opacity);
+	-webkit-box-shadow: 0 0 $thickness 1px rgba($color, $opacity);
+}
+@mixin textglow($thickness: 3px, $color: #FFF, $opacity: 0.3) {
+	text-shadow: 1px 1px $thickness rgba($color, $opacity);
+	-o-text-shadow: 1px 1px $thickness rgba($color, $opacity);
+	-ms-text-shadow: 1px 1px $thickness rgba($color, $opacity);
+	-moz-text-shadow: 1px 1px $thickness rgba($color, $opacity);
+	-webkit-text-shadow: 1px 1px $thickness rgba($color, $opacity);
+}
+@mixin shadow($thickness: 5px, $opacity: 0.1) {
+	box-shadow: 0 0 $thickness 1px rgba(#000, $opacity);
+	-o-box-shadow: 0 0 $thickness 1px rgba(#000, $opacity);
+	-ms-box-shadow: 0 0 $thickness 1px rgba(#000, $opacity);
+	-moz-box-shadow: 0 0 $thickness 1px rgba(#000, $opacity);
+	-webkit-box-shadow: 0 0 $thickness 1px rgba(#000, $opacity);
+}
+@mixin textshadow($thickness: 3px, $opacity: 0.5) {
+	text-shadow: 1px 1px $thickness rgba(#000, $opacity);
+	-o-text-shadow: 1px 1px $thickness rgba(#000, $opacity);
+	-ms-text-shadow: 1px 1px $thickness rgba(#000, $opacity);
+	-moz-text-shadow: 1px 1px $thickness rgba(#000, $opacity);
+	-webkit-text-shadow: 1px 1px $thickness rgba(#000, $opacity);
+}
