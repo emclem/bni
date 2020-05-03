@@ -64,7 +64,7 @@ header .logo img { height: 100%; padding: 20px; }
 .maincontent .innercontainer p label { border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; display: table-cell; font-size: 0.75em; background: #777; color: #FFF; padding: 0px 5px; width: 75px; }
 .maincontent .foot-button { position: absolute; bottom: 0px; left: 0px; width: 100%; height: 80px; background: #f5f5f5; border-top: solid 1px #ddd; text-align: right; }
 .maincontent .foot-button .foot-innercontainer { padding: 15px; height: 100%; }
-.maincontent .foot-button .foot-innercontainer button, .maincontent .foot-button .foot-innercontainer input[type=submit] { height: 100%; padding-left: 75px; padding-right: 75px; }
+.maincontent .foot-button .foot-innercontainer button, .maincontent .foot-button .foot-innercontainer input[type=submit] { height: 100%; padding-left: 20px; padding-right: 20px; }
 
 .inputstyle { border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; display: table-cell; margin-left: 10px; margin-right: 20px; border: solid 1px #AAA; padding: 3px 5px; }
 .inputstyle.is-full { width: 98%; }
@@ -80,7 +80,8 @@ header .logo img { height: 100%; padding: 20px; }
   .maincontent { margin-top: 4vh; margin-bottom: 4vh; }
   .maincontent .innercontainer { padding: 20px; }
   .maincontent .innercontainer p { padding: 5px 0px; }
-  .maincontent .foot-button { text-align: center; } }
+  .maincontent .foot-button { text-align: center; }
+  .maincontent .foot-button .foot-innercontainer button, .maincontent .foot-button .foot-innercontainer input[type=submit] { padding-left: 20px; padding-right: 20px; } }
 @media (min-width: 576px) and (max-width: 767px) { header { box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3); -o-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3); -ms-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3); height: 65px; }
   header .logo { height: 65px; }
   header .logo img { padding: 10px; }
@@ -88,7 +89,7 @@ header .logo img { height: 100%; padding: 20px; }
   .maincontent .innercontainer { padding: 20px; }
   .maincontent .innercontainer p { padding: 5px 0px; }
   .maincontent .foot-button { text-align: center; }
-  .maincontent .foot-button .foot-innercontainer button, .maincontent .foot-button .foot-innercontainer input[type=submit] { padding-left: 60px; padding-right: 60px; } }
+  .maincontent .foot-button .foot-innercontainer button, .maincontent .foot-button .foot-innercontainer input[type=submit] { padding-left: 20px; padding-right: 20px; } }
 @media (min-width: 768px) and (max-width: 991px) { header { box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3); -o-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3); -ms-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3); height: 65px; }
   header .logo { height: 65px; }
   header .logo img { padding: 10px; }
